@@ -9,7 +9,7 @@ App\Entity\Product:
             - Length:
                 min: 4
                 max: 10
-            - Regex: '/^\w+/'
+            - Regex: '/^[Aa0-Zz]/'
         name:
             - NotBlank: ~
             - Length:
