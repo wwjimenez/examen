@@ -1,3 +1,44 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+app_product:
+    path: product
+    controller: App\Controller\ProductController::index
+product_new:
+    path: /product/new
+    controller: App\Controller\ProductController::new
+
+product_edit:
+    path: /product/edit/{id}
+    controller: App\Controller\ProductController::edit
+
+product_delete:
+    path: /product/delete/{id}
+    controller: App\Controller\ProductController::delete
+
+product_show:
+    path: /product/show/{id}
+    controller: App\Controller\ProductController::show
+
+app_category:
+    path: category
+    controller: App\Controller\CategoryController::index
+category_new:
+    path: /category/new
+    controller: App\Controller\CategoryController::new
+
+category_edit:
+    path: /category/edit/{id}
+    controller: App\Controller\CategoryController::edit
+
+category_delete:
+    path: /category/delete/{id}
+    controller: App\Controller\CategoryController::delete
+
+category_show:
+    path: /category/show/{id}
+    controller: App\Controller\CategoryController::show
+
+email:
+    path: /email/
+    controller: App\Controller\MailerController::sendEmail

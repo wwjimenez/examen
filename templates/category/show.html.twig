@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Products{% endblock %}
+{% block body %}
+	<div class="container col-md-12" style="padding: 20px;">
+		<div class="card">
+		    <div class="card-header">Category # {{category.id}}</div>
+		    <div class="card-body">
+		    	<div class="table-responsive">
+	                <table class="table mb-0">
+	                    <thead>
+	                        <tr>
+	                            <th >Name</th>
+	                            <th>Value</th>
+	                        </tr>
+	                    </thead>
+	                    <tbody>
+	                            <tr>
+	                            	<td>
+	                                    Name
+	                                </td>
+	                                <td>
+	                                    {{category.name}}
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                            	 <td>
+	                                    Active
+	                                </td>
+	                                <td>
+	                                    {% if category.active == 1 %}
+	                                    	Actived
+	                                    {% else %}	
+	                                    	Inactivated
+	                                    {% endif %}
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                            	 <td>
+	                                    Created
+	                                </td>
+	                                <td>
+	                                    {{category.createdat|date('d-m-Y')}}
+	                                </td>
+	                            </tr>
+	                    </tbody>
+	                </table>
+	            </div>
+	             <div class="col-md-4" style="padding: 20px;">
+			    	<a href="{{ path('app_category') }}"  class="btn btn-warning btn-sm">back</a>
+			    </div>
+		    </div>
+		</div>
+	</div>
+{% endblock %}

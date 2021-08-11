@@ -1,0 +1,19 @@
+# config/validator/validation.yaml
+App\Entity\Product:
+    constraints:
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: code
+        - Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity: name
+    properties:
+        code:
+            - NotBlank: ~
+            - Length:
+                min: 4
+                max: 10
+            - Regex: '/^\w+/'
+        name:
+            - NotBlank: ~
+            - Length:
+                min: 4
+            - Regex: '/^\w+/'
+
+
